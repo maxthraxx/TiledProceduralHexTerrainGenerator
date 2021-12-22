@@ -300,11 +300,15 @@ function loadGrid(app, viewport, settings) {
         else if (hex.elevation < settings.contourInterval_2) {
             hex.archetype = "Flat";
             if (hex.moisture < 0.10) {
-                hex.biome = "Desert";
-                hex.tile = "FlatDesert1";
+                //hex.biome = "Desert";
+                //hex.tile = "FlatDesert1";
+                hex.biome = "Forest";
+                hex.tile = "FlatForestSwampy";
             } else if (hex.moisture < 0.25) {
-                hex.biome = "Desert";
-                hex.tile = "FlatDesert2";
+                //hex.biome = "Desert";
+                //hex.tile = "FlatDesert2";
+                hex.biome = "Forest";
+                hex.tile = "FlatForestSwampy";
             } else if (hex.moisture < 0.40) {
                 hex.biome = "Grass";
                 hex.tile = "FlatGrass";
@@ -322,8 +326,10 @@ function loadGrid(app, viewport, settings) {
         else if (hex.elevation < settings.contourInterval_3) {
             hex.archetype = "Hill";
             if (hex.moisture < 0.10) {
-                hex.biome = "Desert";
-                hex.tile = "HillDesert";
+                //hex.biome = "Desert";
+                //hex.tile = "HillDesert";
+                hex.biome = "Grass";
+                hex.tile = "HillGrass";
             }
             else if (hex.moisture < 0.45) {
                 hex.biome = "Grass";
@@ -337,8 +343,10 @@ function loadGrid(app, viewport, settings) {
         else if (hex.elevation < settings.contourInterval_4) {
             hex.archetype = "Mountain";
             if (hex.moisture < 0.10) {
-                hex.biome = "Desert";
-                hex.tile = "MountainDesert";
+                //hex.biome = "Desert";
+                //hex.tile = "MountainDesert";
+                hex.biome = "Shrubland";
+                hex.tile = lookup() <= 50 ? "MountainShrubland2": "MountainShrubland1";
             }
             else if (hex.moisture < 0.30) {
                 hex.biome = "Shrubland";
